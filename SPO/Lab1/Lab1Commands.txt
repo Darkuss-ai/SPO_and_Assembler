@@ -1,0 +1,11 @@
+ls -lS | grep "^-" | head -1 - сортировка файлов по размеру
+
+SUM="$(find -maxdepth 1 -type f -print0 | xargs -0 cat | wc -c)" - Находим сумму всех файлов
+NUM="$(ls - l | grep "^-" | wc -l)" - находитм количество файлов
+AVG="$((SUM / NUM))" - Находим средний объём одного файла
+
+Вывод:
+
+echo "$SUM"
+echo "$NUM"
+echo "$AVG
