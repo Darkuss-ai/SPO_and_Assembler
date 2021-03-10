@@ -1,5 +1,5 @@
 cat access.log | awk '{ sum+=$5 } END { printf "Всего %i байт\n",sum }' - Сколько байт передали (Сколько приняли - ?)
 
-cat lesteh.ru-access_log.1 | awk '{name+=$8; Name=$8} END {printf "Тип протокола: %s \n", Name}' - Дополнить нормально!
+cat lesteh.ru-access_log.1 | awk '{name=$8; printf "Тип протокола: %s \n", name}' - Вроде правильно/
 
 
